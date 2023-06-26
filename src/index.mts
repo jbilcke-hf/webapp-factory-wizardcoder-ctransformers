@@ -30,7 +30,7 @@ const app = express()
 const port = 7860
 
 const minPromptSize = 16 // if you change this, you will need to also change in public/index.html
-const timeoutInSec = 60 * 60
+const timeoutInSec = 30 * 60 * 60
 
 console.log("timeout set to 60 minutes")
 
