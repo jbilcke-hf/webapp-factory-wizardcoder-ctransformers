@@ -33,6 +33,36 @@ http://localhost:7860/?prompt=a simple html canvas game where we need to feed ta
 - Install NVM: https://github.com/nvm-sh/nvm
 - Install Docker https://www.docker.com
 
+### Python
+
+This project relies on Python dependencies called through Pythonia.
+
+To install those dependencies, first you should create and activate a new virtual environment for Python:
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install --upgrade pip
+```
+
+Then install the dependencies in it:
+```bash
+pip install -r requirements.txt
+```
+
+### Installing the model
+
+The LLM will be downloaded through the Python functions,
+however we cannot run them using Pythonia or else it will timeout.
+
+Fortunately the solution is simple, we can just download the model in advance:
+
+```
+python download-model.py
+```
+
+This is done automatically when using Docker.
+
 ### CTransformers
 
 This project relies on CTransformers called through Pythonia.
